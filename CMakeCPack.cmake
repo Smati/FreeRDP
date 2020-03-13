@@ -6,7 +6,7 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/LICENSE ${CMAKE_CURRENT_BINARY_DIR}/L
 #SET(CPACK_BINARY_DEB "ON")
 
 option(CPACK_BINARY_DEB  "Enable to build Debian packages"  ON)
-option(CPACK_BINARY_ZIP "Enable to build Zip packages"  ON)
+#option(CPACK_BINARY_ZIP "Enable to build Zip packages"  ON)
 
 # Workaround to remove c++ compiler macros and defines for Eclipse.
 # If c++ macros/defines are set __cplusplus is also set which causes
