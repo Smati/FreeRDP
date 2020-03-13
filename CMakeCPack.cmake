@@ -2,8 +2,11 @@
 # Generate .txt license file for CPack (PackageMaker requires a file extension)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/LICENSE ${CMAKE_CURRENT_BINARY_DIR}/LICENSE.txt @ONLY)
 
-SET(CPACK_BINARY_ZIP "ON")
-SET(CPACK_BINARY_DEB "ON")
+#SET(CPACK_BINARY_ZIP "ON")
+#SET(CPACK_BINARY_DEB "ON")
+
+option(CPACK_BINARY_DEB  "Enable to build Debian packages"  ON)
+option(CPACK_BINARY_ZIP "Enable to build Zip packages"  ON)
 
 # Workaround to remove c++ compiler macros and defines for Eclipse.
 # If c++ macros/defines are set __cplusplus is also set which causes
