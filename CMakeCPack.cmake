@@ -2,7 +2,8 @@
 # Generate .txt license file for CPack (PackageMaker requires a file extension)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/LICENSE ${CMAKE_CURRENT_BINARY_DIR}/LICENSE.txt @ONLY)
 
-#SET(CPACK_BINARY_ZIP "ON")
+SET(CPACK_BINARY_ZIP "ON")
+SET(CPACK_BINARY_DEB "ON")
 
 # Workaround to remove c++ compiler macros and defines for Eclipse.
 # If c++ macros/defines are set __cplusplus is also set which causes
@@ -51,7 +52,7 @@ set(CPACK_PACKAGE_CONTACT "Marc-Andre Moreau")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "marcandre.moreau@gmail.com")
 set(CPACK_DEBIAN_ARCHITECTURE ${CMAKE_SYSTEM_PROCESSOR})
 
-SET(CPACK_GENERATOR "DEB;ZIP;TAR;TGZ")
+#SET(CPACK_GENERATOR "DEB;ZIP;TAR;TGZ")
 
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "FreeRDP")
 set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_BINARY_DIR}/LICENSE.txt")
